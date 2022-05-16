@@ -145,8 +145,7 @@ body {
     background: rgb(255, 255, 255);
 }
 
-
-@media (max-width: 2100px) {
+/* @media (max-width: 2100px) {
     .slider {
         width: 60%;
     }
@@ -162,7 +161,7 @@ body {
     .slider {
         width: 80%;
     }
-}
+} */
 
 @media (max-width: 1300px) {
     .slider {
