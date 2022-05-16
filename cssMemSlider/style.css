@@ -4,12 +4,17 @@
     padding: 0;
 }
 body {
-    width: 100vw;
     height: 100vh;
+    background: rgba(36, 77, 43, 0.925);
+}
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(36, 77, 43, 0.925);
+
+    max-width: 137rem;
+    
+    margin: 5% auto 0;
 }
 .slider {
     width: 50%;
