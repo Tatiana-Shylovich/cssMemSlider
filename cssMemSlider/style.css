@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: rgba(36, 77, 43, 0.925);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 137rem;
+    
+    margin: 5% auto 0;
+}
+.slider {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.images {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.7rem;   
+}
+.images img {  
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+    object-fit: contain;
+}
+.slider input {
+    display: none;
+}
+.second-row {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 4% 5% 0 0;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.dots label {
+    padding: 6%;
+    margin: 0 2%;
+    cursor: pointer;
+}
+.dots label div {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 0.2rem solid rgb(255, 255, 255);
+    
+    transition: all 0.1s ease;
+}
+.dots label:hover div {
+    border-width: 0.4rem;
+}
+.dots label:active div {
+    border-width: 0.7rem;
+}
+
+#img1:checked ~ .images .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .images .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .images .m3 {
+    margin-left: -200%;
+}
+#img4:checked ~ .images .m4 {
+    margin-left: -300%;
+}
+
+.slide-text {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: 2.5rem;
+    overflow: hidden;
+
+    font-size: 0;
+}
+
+.slide-text div {
+    visibility: hidden;
+    opacity: 0;
+
+    min-width: 15rem;
+    height: 1.2rem;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+
+    transition: all 0.5s linear;
+}
+
+#img1:checked ~ .second-row .slide-text .t1 {
+    margin-left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+#img2:checked ~ .second-row .slide-text .t2 {
+    margin-left: -15rem;
+    visibility: visible;
+    opacity: 1;
+}
+#img3:checked ~ .second-row .slide-text .t3 {
+    margin-left: -30rem;
+    visibility: visible;
+    opacity: 1;
+}
+#img4:checked ~ .second-row .slide-text .t4 {
+    margin-left: -45rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+#img1:checked ~ .second-row .dots .dot1 {
+    border: 0.2rem solid rgba(36, 77, 43, 0.925);
+    background: rgb(255, 255, 255);
+}
+#img2:checked ~ .second-row .dots .dot2 {
+    border: 0.2rem solid rgba(36, 77, 43, 0.925);
+    background: rgb(255, 255, 255);
+}
+#img3:checked ~ .second-row .dots .dot3 {
+    border: 0.2rem solid rgba(36, 77, 43, 0.925);
+    background: rgb(255, 255, 255);
+}
+#img4:checked ~ .second-row .dots .dot4 {
+    border: 0.2rem solid rgba(36, 77, 43, 0.925);
+    background: rgb(255, 255, 255);
+}
+
+/* @media (max-width: 2100px) {
+    .slider {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .slider {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .slider {
+        width: 80%;
+    }
+} */
+
+@media (max-width: 1300px) {
+    .slider {
+        width: 90%;
+    }
+    .images {
+        border-radius: 1.5rem;   
+    }
+    .dots label div {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider {
+        width: 90%;
+    }
+    .images {
+        border-radius: 1rem;   
+    }
+    .second-row {
+        flex-direction: column;
+
+    }
+    .dots {
+        order: -1;
+        align-self: center;
+    }
+    .dots label div {
+        height: 1.4rem;
+        width: 1.4rem;
+        border: 0.2rem solid rgb(255, 255, 255);
+    }
+    .dots label:hover div {
+        border-width: 0.3rem;
+    }
+    .dots label:active div {
+        border-width: 0.5rem;
+    }
+    .slide-text div {
+        font-size: 1.2rem;  
+    }
+}
+
+@media (max-width: 425px) {
+    .slide-text div {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    .images {
+        border-radius: 0.5rem;   
+    }
+
+   .dots label div {
+        height: 1rem;
+        width: 1rem;
+        border: 0.15rem solid rgb(255, 255, 255);
+    }
+    .dots label:hover div {
+        border-width: 0.2rem;
+    }
+    .dots label:active div {
+        border-width: 0.4rem;
+    }
+
+    .slide-text div {
+        font-size: 1rem;  
+    }
+}
